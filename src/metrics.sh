@@ -14,10 +14,10 @@ echo 'k8s_stats_cm_count{}' ${METRIC_CM_COUNT}
 export METRIC_SECRET_COUNT=$(kubectl get secret -A | wc -l)
 echo 'k8s_stats_secret_count{}' ${METRIC_SECRET_COUNT}
 
-export METRIC_CR_COUNT=$(kubectl get cr | wc -l)
+export METRIC_CR_COUNT=$(kubectl get clusterrole | wc -l)
 echo 'k8s_stats_cr_count{}' ${METRIC_CR_COUNT}
 
-export METRIC_CRB_COUNT=$(kubectl get crb | wc -l)
+export METRIC_CRB_COUNT=$(kubectl get clusterrolebinding | wc -l)
 echo 'k8s_stats_crb_count{}' ${METRIC_CRB_COUNT}
 
 export METRIC_SA_COUNT=$(kubectl get sa -A | wc -l)
